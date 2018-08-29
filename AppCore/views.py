@@ -24,6 +24,18 @@ def Vista404(request):
         return render(request, template , contexto)
 
 
+def NoFuncionalidad(request):
+    template = "AppCore/NoFuncionalidad.html"
+    nombre_pestania = "No funcionalidad"
+    if request.method == "GET":
+        contexto = {
+            "clave_nombre_pestania" : nombre_pestania,
+            "clave_error_NF": "No existe esta funcionalidad"
+            }
+        return render(request, template , contexto)
+
+
+
 #---------------- CLASES ----------------#
 class VistaAbout(TemplateView):
     template_name = "AppCore/About.html"
@@ -44,11 +56,11 @@ class VistaHome(TemplateView):
         return render(request,self.template_name,contexto)
 
 class VistaPortfolio(TemplateView):
-    template_name = "AppCore/Portfolio.html"
+    template_name = "AppCore/QueHacemos.html"
    
     def get(self,request,*args,**kwargs):
         contexto = {
-            'clave_nombre_pestania' : "Portfolio",
+            'clave_nombre_pestania' : "Que hacemos",
                 }
         return render(request,self.template_name,contexto)
 

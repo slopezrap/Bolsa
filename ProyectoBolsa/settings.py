@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     #Mis Apps
     'AppCore',
     'AppCheckCeleryChannels',
+    'AppAccounts',
+    'AppContacto',
 ]
 
 MIDDLEWARE = [

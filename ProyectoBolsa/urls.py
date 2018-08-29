@@ -24,6 +24,10 @@ urlpatterns = [
     path('checks/', include('AppCheckCeleryChannels.urls')),
     #Path del admin
     path('admin/', admin.site.urls),
+    #Paths AppAccounts
+    path('accounts/', include('AppAccounts.urls')),
+    #Paths AppContacto
+    path('contacto/', include('AppContacto.urls')),
 ]
 
 
